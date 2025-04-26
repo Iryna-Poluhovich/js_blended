@@ -1,0 +1,159 @@
+//Напиши функцію findSmallerNumber(numbers)
+//яка шукає найменше число в масиві.
+//Додай перевірку що функція отримує масив
+
+ //const numbers = [2, 5, 35, 56, 12, 1, 7, 80, 3];
+//function findSmallerNumber(numbers){
+ //let min = numbers[0];
+ //for (const number if numbers){
+   //   if ( min > number) {
+   //   min = number;
+   // }
+ //}
+ //return min;
+//}
+
+//Напишіть функцію caclculateAverage()
+//яка приймає довільну кількість
+//аргументів і повертає їхнє середнє значення.
+//Додати перевірку, що аргументи це числа.
+// console.log(calculateAverage(10, 10, 20, 200));
+
+
+; function calculateAverage(...args) {
+;   if (args.length === 0) {
+;     return 'Помилка: немає аргументів.';
+;   }
+
+;   for (const arg of args) {
+;     if (typeof arg !== 'number' || isNaN(arg)) {
+;       return 'Помилка: всі аргументи повинні бути числами.';
+;     }
+;   }
+
+;   const sum = args.reduce((acc, num) => acc + num, 0);
+;   const average = sum / args.length;
+
+;   return average;
+; }
+
+; console.log(calculateAverage(10, 10, 20, 300, "hhk"));
+
+// Напишіть функцію min(a,b), яка повертає менше чисело з a і b.
+function min(a, b) {
+;   return a < b ? a : b;
+; }
+; console.log(min(5, 10)); // Виведе: 5
+; console.log(min(20, 3)); // Виведе: 3
+
+// напиши функцію яка сумуватиме сусідні числа і пушити в новий масив
+
+; const someArr = [22, 11, 34, 5, 12, 13, 14, 15];
+
+; function sumAdjacentNumbers(arr) {
+;     const result = [];
+;   for (let i = 0; i < arr.length - 1; i++) {
+;     result.push(arr[i] + arr[i + 1]);
+;   }
+
+;   return result;
+; }
+
+; console.log(sumAdjacentNumbers(someArr));
+
+//Напишіть функцію logItems(array), яка приймає
+//масив та використовує цикл for, який для кожного
+//елемента масиву виводитиме повідомлення у форматі
+//<номер елемента> - <значення елемента>
+//Нумерація елементів має починатися з першого.
+; const array = ['Джаз', 'Блюз', 'Рок-н-рол', 'Реггі', 'Реп'];
+; function logItems(array){
+;    for (let i = 0; i < array.length; i++) {
+;     console.log(`${i + 1} - ${array[i]}`);
+;   }
+;     }
+; logItems(array);
+
+// Напиши скрипт, який для об'єкта user,
+// Послідовно:
+// 1. додати поле mood зі значенням 'happy'
+// 2. замінити hobby на 'skydiving'
+// 3. замінити значення premium на false
+// 4. виводити зміст об'єкта user у форматі
+// ключ:значення використовуючи Object.keys() і for...of
+
+// const user = {
+//  name: "John",
+//  age: 20,
+//  hobby: "tenis",
+//  premium: true,
+// };
+// user.mood = 'happy';
+// user.hobby = 'skydiving';
+//user.premium = false;
+//const keys = Object.keys(user);
+//
+//for (const key of keys) {
+//  console.log(`${key}: ${user[key]}`);
+//}
+
+// В нас є объект, в якому зберігаються зарплатні
+// нашої команди
+// Напишіть код для підсумовання всіх зарплат і
+// Збережіть його результат в перемінну sum.
+// Якщо объект salaries пустий, тоді результат має бути 0
+
+//const salaries = {
+ //  Mango: 100,
+//   Poly: 160,
+//   Ajax: 1470,
+// };
+//let sum = 0;
+//
+//const values = Object.values(salaries);
+//
+//for (const salary of values) {
+//  sum += salary;
+//}
+//
+//console.log(sum);
+
+// Потрібно написати функцію, яка приймає 2 параметри key та obj,
+// яка буде перебирати об'єкт
+// Якщо у об'єкта є такий ключ - поверне true
+//const obj = {
+  //name: "Igor",
+ // car: "Mercedes",
+ // carColor: "black",
+ //};
+
+//function getBool(key, obj) {
+//  if (typeof obj !== 'object' || obj === null) {
+//    return false;
+//  }
+//
+//  return key in obj;
+//}
+
+//console.log(getBool("name", obj));
+
+// Створіть функцію multiplyNumeric(obj),
+// яка множить всі числові властивості об'єкта obj на 2
+// треба повертати об'єкт
+
+const menu = {
+   width: 200,
+   height: 300,
+   title: "My menu",
+ };
+ function multiplyNumeric(obj){
+    for (const key in obj) {
+    if (typeof obj[key] === 'number') {
+      obj[key] *= 2;
+    }
+  }
+
+  return obj;
+ }
+ const updatedMenu = multiplyNumeric(menu);
+console.log(updatedMenu);
