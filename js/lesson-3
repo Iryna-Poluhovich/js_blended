@@ -1,0 +1,276 @@
+; function letMeSeeYourName(callback) {
+;   let name = promt('What is your name?');
+  
+;   // Повторювати запит, поки користувач не введе непорожній рядок
+;   while (!name) {
+;     name = prompt("Введіть ваше ім'я:");
+;     if (!name) {
+;       alert("Ім'я не може бути порожнім. Спробуйте ще раз.");
+;     }
+;   }
+
+;   // Викликаємо callback з іменем
+;  return callback(name);
+; }
+
+; function greet(name) {
+;   console.log(`Привіт, ${name}`);
+; }
+//Напишіть дві функції
+//makeProduct(name, price, callback) - приймає
+//ім'я та ціну товару, а також callback.
+//Функція створює об'єкт товару, додаючи йому унікальний
+//ідентифікатор як id і викликає callback
+//Передаючи йому створений об'єкт.
+//showProduct(product) - коллбек приймаючий об'єкт
+//продукту і логірующий їх у консоль
+//id: Math.random()
+//product.id = Date.now()
+//product.id = new Date()
+//product.id = Math.floor(Math.random() * 100)
+
+// function makeProduct(name, price, callback) {
+//   const product = {
+//     name,
+//     price,
+//     id: Math.random(),
+//     // id: Date.now(),
+//     // id: new Date(),
+//     id: Math.floor(Math.random() * 100)
+//   };
+// return callback(product);
+// }
+
+// function showProduct(product) {
+//   console.log("Інформація про продукт:");
+//   console.log("Назва:", product.name);
+//   console.log("Ціна:", product.price);
+//   console.log("ID:", product.id);
+// }
+
+// makeProduct("Смартфон", 9999, showProduct);
+
+//Виправте помилки, щоб код працював
+
+//function callAction(action) {
+//  action();
+// }
+
+// const item = {
+//   getQuantity() {
+//     console.log(this.quantity);
+//   },
+//  quantity: 5,
+// };
+
+ //callAction(item.getQuantity.bind(item));
+
+
+ //const courses = [
+ // {
+ //   name: "Basic HTML+CSS",
+ //   topics: ["VSCode", "HTML", "CSS", "GitHub", "GitHub Desctop"],
+ // },
+ // {
+ //   name: "Intermediate HTML+CSS",
+ //   topics: ["VSCode", "HTML", "CSS", "GitHub", "Git", "Terminal"],
+ // },
+ // {
+ //   name: "Basic JavaScript",
+ //   topics: [
+ //     "VSCode",
+ //     "Type system",
+ //     "Loops",
+ //     "Function",
+ //     "Git",
+ //     "Conditions",
+ //     "Classes",
+ //     "GitHub",
+//      "DOM",
+//    ],
+//  },
+//  {
+//    name: "Intermediate JavaScript",
+//    topics: [
+//      "VSCode",
+//      "NPM",
+//      "Bundlers",
+//      "Transpiling",
+//      "Git",
+//      "Promises",
+//      "AJAX",
+//      "GitHub",
+//    ],
+//  },
+//];
+
+//const allTopics = courses.flatMap(course => course.topics);
+
+//const uniqueTopics = [...new Set(allTopics)];
+
+//console.log("Всі теми:", allTopics);
+//console.log("Унікальні теми:", uniqueTopics);
+
+//Напиши функцію конструктор User для створення користувача з такими властивостями
+//a. userName - ім'я, рядок
+//b. age - вік, число
+//c. numbersOfPost - кількість постів, число
+//d. клас очікує 1 параметр - об'єкт налаштувань з однойменними властивостями
+
+//Додай метод getInfo(), який повертає рядок:
+//`Користувачеві ${} ${} років і в нього ${} публікацій.`
+// const polly = new User({ userName: "Polly", age: 30, numbersOfPost: 15 });
+// console.log(polly);
+// polly.getInfo();
+
+//function User({ userName, age, numbersOfPost }) {
+//  this.userName = userName;
+//  this.age = age;
+//  this.numbersOfPost = numbersOfPost;
+
+//  this.getInfo = function () {
+//    return `Користувачеві ${this.userName} ${this.age} років і в нього ${this.numbersOfPost} публікацій.`;
+//  };
+//}
+
+//const polly = new User({ userName: "Polly", age: 30, numbersOfPost: 15 });
+
+//console.log(polly); // Об'єкт користувача
+//console.log(polly.getInfo()); // Рядок з інформацією
+
+//Напиши клас Client який створює об'єкт
+//з ​​властивостями login email
+//Оголоси приватні властивості #login #email,
+//доступ до яких зроби через геттер та сеттер login email
+// const client = new Client("mango", "mango@gmail.com");
+// client.changeEmail = "change_mail@gmail.com";
+// console.log(client.getClientData.email);
+
+//class Client {
+//#login;
+//#email;
+//constructor(login, email){
+//this.#login = login;
+//this.#email = email;
+//}
+//get login(){
+//return this.#login;
+//}
+// set login(newLogin) {
+//    this.#login = newLogin;
+//  }
+//  get email() {
+//    return this.#email;
+//  }
+
+ // set changeEmail(newEmail) {
+//    this.#email = newEmail;
+//  }
+
+//  get getClientData() {
+ //   return {
+ //     login: this.#login,
+ //     email: this.#email
+ //   };
+ // }
+//}
+//const client = new Client("mango", "mango@gmail.com");
+//client.changeEmail = "change_mail@gmail.com";
+//console.log(client.getClientData.email);
+
+//  Написати клас, який буде представляти зоопарк тварин.
+//  Створити загальний клас Animal для тварин.
+// У зоопарку повинні бути різні типи тварин, такі як ссавці, птахи, рептилії тощо.
+// Кожен тип тварин повинен мати свої властивості та методи, наприклад,
+//  методи для отримання інформації про тварину та для годівлі тварин.
+//  Крім того, зоопарк повинен мати метод для додавання тварин до списку та
+// метод для виведення списку всіх тварин у зоопарку.
+
+class Animal {
+  constructor(name, species, diet) {
+    this.name = name;
+    this.species = species;
+    this.diet = diet;
+  }
+
+  getInfo() {
+    return `${this.name} (${this.species}), харчується: ${this.diet}`;
+  }
+
+  feed() {
+    return `${this.name} нагодований(а) їжею: ${this.diet}`;
+  }
+}
+
+// Ссавці
+class Mammal extends Animal {
+  constructor(name, diet, hasFur = true) {
+    super(name, "Ссавець", diet);
+    this.hasFur = hasFur;
+  }
+
+  getInfo() {
+    return `${super.getInfo()}, має хутро: ${this.hasFur ? "так" : "ні"}`;
+  }
+}
+
+// Птахи
+class Bird extends Animal {
+  constructor(name, diet, canFly = true) {
+    super(name, "Птах", diet);
+    this.canFly = canFly;
+  }
+
+  getInfo() {
+    return `${super.getInfo()}, може літати: ${this.canFly ? "так" : "ні"}`;
+  }
+}
+
+// Рептилії
+class Reptile extends Animal {
+  constructor(name, diet, isVenomous = false) {
+    super(name, "Рептилія", diet);
+    this.isVenomous = isVenomous;
+  }
+
+  getInfo() {
+    return `${super.getInfo()}, отруйна: ${this.isVenomous ? "так" : "ні"}`;
+  }
+}
+
+// Зоопарк
+class Zoo {
+  constructor() {
+    this.animals = [];
+  }
+
+  addAnimal(animal) {
+    this.animals.push(animal);
+    console.log(`${animal.name} доданий до зоопарку.`);
+  }
+
+  listAnimals() {
+    console.log("Тварини у зоопарку:");
+    this.animals.forEach((animal, index) => {
+      console.log(`${index + 1}. ${animal.getInfo()}`);
+    });
+  }
+}
+
+// ==== Приклад використання ====
+
+const zoo = new Zoo();
+
+const lion = new Mammal("Лев", "м'ясо");
+const eagle = new Bird("Орел", "риба");
+const snake = new Reptile("Кобра", "гризуни", true);
+
+zoo.addAnimal(lion);
+zoo.addAnimal(eagle);
+zoo.addAnimal(snake);
+
+zoo.listAnimals();
+
+console.log(lion.feed());
+console.log(eagle.feed());
+console.log(snake.feed());

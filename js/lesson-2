@@ -141,19 +141,19 @@ function min(a, b) {
 // яка множить всі числові властивості об'єкта obj на 2
 // треба повертати об'єкт
 
-const menu = {
-   width: 200,
-   height: 300,
-   title: "My menu",
- };
- function multiplyNumeric(obj){
-    for (const key in obj) {
-    if (typeof obj[key] === 'number') {
-      obj[key] *= 2;
-    }
-  }
+//const menu = {
+  // width: 200,
+   //height: 300,
+   //title: "My menu",
+ //};
+ //function multiplyNumeric(obj){
+   // for (const key in obj) {
+    //if (typeof obj[key] === 'number') {
+    //  obj[key] *= 2;
+    //}
+  //}
 
-  return obj;
- }
- const updatedMenu = multiplyNumeric(menu);
-console.log(updatedMenu);
+  //return obj;
+ //}
+ //const updatedMenu = multiplyNumeric(menu);
+//console.log(updatedMenu);
